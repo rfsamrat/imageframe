@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  onload="loadedDocument()">
+    <table id="table" >
+
+    </table>
+    <script>
+        function loadedDocument(){
+       //for big device td*10 + tr*3 1230
+       const bigDevice=window.matchMedia('(min-width: 1230px)');
+        //for medium device 718 to 950
+        //const mediumDeviceTd7 =window.matchMedia('(min-width: 718px)');
+        const mediumDeviceTd8 =window.matchMedia('(min-width: 902px)');
+       // const mediumDeviceTd9 =window.matchMedia('(min-width: 950px)');
+
+        //for sejo device 606
+        const sejoDeviceTd7 =window.matchMedia('(min-width: 606px)');
+
+        //for sejo 2 device 550
+        const sejo2DeviceTd7 =window.matchMedia('(min-width: 550px)');
+
+        //for mejo  desvice 496
+        const mejoDeviceTd9 =window.matchMedia('(min-width: 496px)');
+
+        //for mejo 2 device 474
+        const mejo2DeviceTd9 =window.matchMedia('(min-width: 474px)');
+
+        //for mini device 448
+        const miniDeviceTd9 =window.matchMedia('(min-width: 448px)');
+
+        //for extra mini device 414
+        const extraMiniDeviceTd9 =window.matchMedia('(min-width: 448px)');
+
+        //for super mini device 380
+        const superMiniDeviceTd9 =window.matchMedia('(min-width: 380px)');
+
+        //for nano device 360
+        const nanoDeviceTd9 =window.matchMedia('(min-width: 360px)');
+
+
+        //
+        if (bigDevice.matches) {
+            firstLastRowElementCreation();
+            for(var i=0;i<10;i++){
+                tableDataCreation();
+            }
+
+     
+        }
+
+        function firstLastRowElementCreation(){
+            const trow=document.createElement('tr');
+            const tab = document.getElementById('table');
+            tab.appendChild(tr);
+            trow.setAttribute("id", "first-row"); 
+        }
+        function tableDataCreation(){
+            const tdata= document.createElement('td');
+            const row = document.getElementById('first-row');
+            row.appendChild(td);
+        }
+
+
+        }
+ 
+
+    </script>
+</body>
+</html>
